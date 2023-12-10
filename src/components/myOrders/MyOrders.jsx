@@ -1,12 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { AiOutlineEye } from "react-icons/ai";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { AiOutlineEye } from 'react-icons/ai';
+import { items } from '../home/Menu';
 
 const MyOrders = () => {
-  const arr = [1, 2, 3, 4];
-
+ 
   return (
-    <section className="tableClass">
+    <section className='tableClass'>
       <main>
         <table>
           <thead>
@@ -21,8 +21,20 @@ const MyOrders = () => {
           </thead>
 
           <tbody>
-//     Add the code for the table body
-           
+            {items.map((item) => (
+              <tr key={item.id}>
+                <td>{`random_id __${item.id}`}</td>
+                <td>Processing</td>
+                <td>23</td>
+                <td>₹{2132}</td>
+                <td>COD</td>
+                <td>
+                  <Link to={`/order/${'random_uri'}`}>
+                    <AiOutlineEye />
+                  </Link>
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </main>

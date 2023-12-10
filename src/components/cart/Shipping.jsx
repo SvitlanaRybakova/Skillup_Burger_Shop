@@ -181,7 +181,7 @@ const Shipping = () => {
               className='popup-btn'
               onClick={() => {
                 setSuccess(false);
-                navigate('/myorders');
+                navigate('/my-orders');
               }}
               style={{
                 marginTop: '20px',
